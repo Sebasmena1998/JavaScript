@@ -223,3 +223,77 @@ console.log("Residuo: ",  valor1 % valor2 )
 
 console.log("Exponente: ", valor1 ** valor2 );
 
+/*Switch
+
+Esta condicional nos permite hacer multiples operaciones y tomar decisiones en funcion de distintos estados de las variables. 
+Evalua una expresion comparando el valor de un dato o variable, y ejecutando la instruccion asociada a ese caso.
+
+
+ - case: Evalua el caso o condicion asociado que dispara un bloque de codigo
+ - break: Termina el proceso sin que tengamos que pasar por todas las iteraciones o casos.
+ - default: Termina el proceso en caso de que ninguna de las evaluaciones sea la correcta (similar al else)
+
+
+
+switch (expresion o condicion){
+    case valor1:
+        //Codigo que se ejecuta si la condicion es igual a valor1
+    break;
+
+    case valor2:
+        //Codigo que se ejecuta si la condicion es igual a valor2
+    break;
+
+    case valor3:
+        //Codigo que se ejecuta si la condicion es igual a valor3
+    break;
+
+    case valor4:
+        //Codigo que se ejecuta si la condicion es igual a valor4
+    break;
+
+    case valor5:
+        //Codigo que se ejecuta si la condicion es igual a valor5
+    break;
+
+    default:
+        //Ingresaste un piso incorrecto (un bloque de codigo que se ejecuta si no se cumple con ninguna de las condiciones anteriores)
+}
+
+*/
+
+//Ejemplo de Switch
+
+
+let pisoDestino = prompt("Ingresa al piso al que quieras ir (1 al 5)");
+
+switch (pisoDestino) {
+    case "1":
+        console.log("Vamos al piso 1(Suena musica de elevador de fondo)");
+        
+        break;
+
+        case "2":
+        console.log("Vamos al piso 2(Suena musica de elevador de fondo)");
+        
+        break;
+
+        case "3":
+        console.log("Vamos al piso 3(Suena musica de elevador de fondo)");
+        
+        break;
+
+        case "4":
+        console.log("Vamos al piso 4(Suena musica de elevador de fondo)");
+        
+        break;
+        
+        case "5":
+        console.log("Vamos al piso 5(Suena musica de elevador de fondo)");
+        
+        break;
+
+    default:
+        console.log("Ingresaste un piso que no es valido")
+        break;
+}

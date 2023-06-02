@@ -11,42 +11,107 @@ En resumen, DOM es lo que nos permite manejar HTML con JavaScript a traves del n
 
 Elementos del DOM
 
+Todos los elementos del DOM se consideran nodos. 
 
-Todos los elementos del DOM se considera nodos
+ - Document (Es el nodo raiz)
+ - Element (todas las etiquetas de HTML)
+ - Texto (textos que estan dentro de las etiquetas)
+ - Atributo (todos los atributos que pueden llegar a tener las etiquetas)
+ - Comentario (Todos los comentarios del documento)
 
-- Document (Es el nodo raiz) 
--Element (Todas las etiquetas de HTML)
--Texto (Texto que estan dentro de las etiquetas)
--Atributo (Todos los atributos que pueden llegar a tener las etiquetas)
--Comentario (Todos los comentarios del documento)
-
-
-
-Comunicación entre HTML y JS
+Comunicacion entre HTML y JS
 
 
-Metodos de selección de elementos 
+
+Metodos de seleccion de elementos
+Son elementos que nos van a permitir seleccionar uno o varios elementos o grupos de ellos del DOM. Estos metodos se utilizan en el documento , por eso se agrega un document.getElement
+Tradicionales
+
+    getElementByID : busca elementos por su id
+    getElementsByClassName: busca por elementos por su clase
+    getElementsByTagName
 
 
-getElementByID: Busca elementos por su id
-getElementByClassName: Busca elementos por su clase
-getElementByTagName
+Modernos
+    querySelector(): Busca el primer elemento que coincide con el selector de CSS
+    querySelectorAll(): Busca todos los elementos que coinciden con el selector de CSS
+
+
 */
+//traer elementos con el getElementById
 
 let parrafo = document.getElementById("parrafo1");
-
-parrafo.style.color= "red";
-
-parrafo.innerHTML = "Hola este es un nuevo tecto generado por un InnerHTML" 
-
+parrafo.style.color = "blue";
+parrafo.innerHTML = "Hola este es un nuevo texto generado por un InnerHTML"
 console.log(parrafo)
 
-let parrafitos = document.getElementsByClassName("parrafo");
+
+// Traer elementos 
+let parrafitos = document.getElementById("parrafo2");
+parrafitos.style.color = "red";
+console.log(parrafitos + " Este es parrafitos");
 
 
-var parrafosEtiqueta = document.getElementsByTagName("p")
-parrafosEtiqueta.style.color = "blue"
+// Traer elementos por el nombre de la etiqueta
+let parrafosEtiqueta = document.getElementById("parrafo3")
+parrafosEtiqueta.style.color ="green";
 console.log(parrafosEtiqueta);
 
 
-console.log(parrafo);
+//Metodos más actuales
+
+var parrafoQuerySelector = document.querySelector("#parrafo1");
+var parrafoQuerySelectorAll = document.querySelectorAll("#parrafo2")
+
+
+
+/* Evento con EventListener 
+
+Permite escuchar el evento indicado (primer parametro) y en el caso de que ocurra (escuche), se ejecuta la función asociada (segundo parametro)
+
+Sintaxis
+
+object.addEventListener(nombre del evento, funcionQueSeDispara);
+
+*/
+
+//Referencia botton
+
+const botonCambiacolor = document.querySelector("#botonCambiaColor")
+
+function cambioDeColor(color) {
+
+    botonCambiacolor.addEventListener("click", function(){
+    
+    alert("Hola haz presionado el boton para cambiar color")
+} );
+
+
+}
+
+cambioDeColor("yellow");
+
+
+//Para crear elementos creatElement()
+const div = document.createElement("div");
+
+
+//Para insertarlo appendChild
+document.body.appendChild(div);
+
+
+//Codigo para agregar una imagen a mi documento
+
+// 1ro Creo la imagen que ira dentro del documento
+var appenImg = document.createElement("img");
+
+appenImg.src ="https://cdns-images.dzcdn.net/images/artist/098ea0886f463cf48b75d2af855ad3b9/500x500.jpg";
+appenImg.alt = "Imagen Sorpresa";
+
+
+//2do insertar
+
+document.body.appendChild(appenImg);
+
+
+

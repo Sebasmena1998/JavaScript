@@ -166,3 +166,23 @@ console.log(listaDeComprasDeLaQuincena.indexOf("Chicharrones"));
 console.log("Resumen de compra");
 //Metodo para unir elementos de un arreglo en una cadena de texto
 console.log(listaDeComprasDeLaQuincena.join(" *** "));
+
+
+// Modificacion del arreglo (push, pop, shift, unshift, splice)
+
+// Acceso y busqueda de elementos (indexOf, lastIndexOf, includes)
+
+// Transformacion de elementos (sort, reverse, map, forEach)
+
+// Operaciones logicas (every, some)
+
+// Creacion de nuevos arreglos (slice, concat, join, reverse)
+
+/*Splice (agregar, eliminar o reemplazar elementos en posiciones especificas)
+
+Sintaxis del splice
+
+
+array.splice(iniciamos, numeroElementosABorrar, ElementoAInsertar, ElementoAInsertar);
+
+*/

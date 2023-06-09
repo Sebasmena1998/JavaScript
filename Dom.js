@@ -39,59 +39,39 @@ Modernos
 
 */
 //traer elementos con el getElementById
-
 let parrafo = document.getElementById("parrafo1");
-parrafo.style.color = "blue";
+parrafo.style.color = "green";
 parrafo.innerHTML = "Hola este es un nuevo texto generado por un InnerHTML"
 console.log(parrafo)
-
-
 // Traer elementos 
 let parrafitos = document.getElementById("parrafo2");
 parrafitos.style.color = "red";
 console.log(parrafitos + " Este es parrafitos");
-
-
 // Traer elementos por el nombre de la etiqueta
 let parrafosEtiqueta = document.getElementById("parrafo3")
 parrafosEtiqueta.style.color ="green";
 console.log(parrafosEtiqueta);
-
-
 //Metodos más actuales
-
 var parrafoQuerySelector = document.querySelector("#parrafo1");
 var parrafoQuerySelectorAll = document.querySelectorAll("#parrafo2")
-
-
-
 /* Evento con EventListener 
-
 Permite escuchar el evento indicado (primer parametro) y en el caso de que ocurra (escuche), se ejecuta la función asociada (segundo parametro)
-
 Sintaxis
-
 object.addEventListener(nombre del evento, funcionQueSeDispara);
-
 */
-
 //Referencia botton
-
 const botonCambiacolor = document.querySelector("#botonCambiaColor")
-
 function cambioDeColor(color) {
-
+}
     botonCambiacolor.addEventListener("click", function(){
-    
+        parrafo.style.color= "yellow"
     alert("Hola haz presionado el boton para cambiar color")
 } );
 
 
-}
-
 cambioDeColor("yellow");
 
-
+/*
 //Para crear elementos creatElement()
 const div = document.createElement("div");
 
@@ -115,3 +95,4 @@ document.body.appendChild(appenImg);
 
 
 
+*/
